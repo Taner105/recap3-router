@@ -1,24 +1,22 @@
-import { Card, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import React from 'react'
+import { Card , Button } from 'react-bootstrap'
 
-const MyCard = (props) => {
-  const navigate = useNavigate();
-  const { text, name, img, link } = props.course;
-  return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={img} />
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>{text}</Card.Text>
-        <Button
-          style={{ background: "#C400FF" }}
-          onClick={() => navigate(`/${link}`)}
-        >
-          Details
-        </Button>
-      </Card.Body>
-    </Card>
-  );
-};
+const MyCard = () => {
+    return (
+        <div>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk of
+                    the card's content.
+                    </Card.Text>
+                    <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+            </Card>
+        </div>
+    )
+}
 
 export default MyCard;

@@ -1,15 +1,13 @@
-import Courses from "../components/Courses";
-import Slider from "../components/Slider";
-import courseData from "../data/courseData";
+import React from 'react'
+import Slider from '../components/Slider';
 
 const Home = () => {
-  return (
-    <>
-      <Slider />
-      <h1 className="text-center">Courses</h1>
-      <Courses data={courseData} />
-    </>
-  );
-};
+    return (
+        <div>
+            <Slider/>
+            <h1>Home</h1>
+        </div>
+    )
+}
 
 export default Home;
