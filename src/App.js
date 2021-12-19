@@ -7,6 +7,7 @@ import Instructor from "./pages/Instructor"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
+import InstructorDetail from "./pages/InstructorDetail";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         <Route path="/data-science" element={<FullStack/>} />
         <Route path="/devops" element={<FullStack/>} />
         <Route path="/instructor" element={<Instructor/>} />
+
+        {/* <Route path="/instructors" element={<Instructors />} /> */}
+        <Route path="/instructors/:login" element={<InstructorDetail />} />
 
       </Routes>
       <Footer/>
