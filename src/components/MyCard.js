@@ -1,18 +1,19 @@
 import React from 'react'
 import { Card , Button } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 
-const MyCard = () => {
+const MyCard = ({course}) => {
+    const navigate = useNavigate();
     return (
         <div>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src={course.img}/>
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+                    <Card.Title>{course.name}</Card.Title>
                     <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                    {course.text}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary" onClick={() => navigate(`/${course.link}`)}>Details</Button>
                 </Card.Body>
             </Card>
         </div>
